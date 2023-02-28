@@ -15,7 +15,6 @@ namespace StateManagementDemo.Controllers
             if (_httpContextAccessor.HttpContext != null)
             {
                 ViewBag.Email = _httpContextAccessor.HttpContext.Request.Cookies["email"];
-                ViewBag.UserId = _httpContextAccessor.HttpContext.Request.Cookies["userid"];
             }
             return View();
         }

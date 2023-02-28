@@ -29,8 +29,9 @@ namespace StateManagementDemo.Controllers
             options.Path = "/";
             //options.Secure = true;
             //options.HttpOnly = true; // cookie can be read using client side script --> javascript / vbscript
+            // Response property is used to write to cookie
             _httpContextAccessor.HttpContext.Response.Cookies.Append("email", email, options);
-            _httpContextAccessor.HttpContext.Response.Cookies.Append("userid", "1", options);
+           
             return RedirectToAction("ReadCookie", "ReadCookieSession");
         }
         public IActionResult WorkingWithSession()
